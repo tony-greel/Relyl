@@ -1,0 +1,3 @@
+rootProject.name = "Rely"
+include ':app'
+include ':mylibrary'
