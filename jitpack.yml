@@ -1,8 +1,0 @@
-# configuration file for building snapshots and releases with jitpack.io
-jdk:
-  - openjdk18
-before_install:
-  - ./scripts/prepareJitpackEnvironment.sh
-install:
-  - FILE="-Dfile=mylibrary-debug.aar"
-  - mvn install:install-file $FILE -DgroupId=com.github.tony-greel -DartifactId=Relyl -Dversion=1.0.1 -Dpackaging=aar -DgeneratePom=true
