@@ -15,8 +15,6 @@ android {
     defaultConfig {
         minSdkVersion 16
         targetSdkVersion 34
-        versionCode 1
-        versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
@@ -35,6 +33,7 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    namespace 'com.example.mylibrary'
 }
 
 dependencies {
@@ -47,6 +46,9 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    implementation 'com.appsflyer:af-android-sdk:6.12.4'
+    implementation 'com.github.megatronking.stringfog:xor:5.0.0'
 }
 
 afterEvaluate {
@@ -56,7 +58,7 @@ afterEvaluate {
                 from components.release         // 表示发布 release（jitpack 都不会使用到）
                 groupId = 'com.example'    // 这个是依赖库的组 id
                 artifactId = 'mylibrary'     // 依赖库的名称（jitpack 都不会使用到）
-                version = '1.0.1'     //当前版本依赖库版本号，这个jitpack不会使用到，只是我们开发者自己查看
+                version = '1.0.4'     //当前版本依赖库版本号，这个jitpack不会使用到，只是我们开发者自己查看
             }
         }
     }
